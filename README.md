@@ -6,6 +6,6 @@ This script will try to install Openjdk-11.0.1 in termux
 - chmod +x install.sh
 - ./install.sh
 - Package is about 248MB and needs constant internet for proper installation
-java will be installed....
+
 # Author
 - MrAdityaAlok
