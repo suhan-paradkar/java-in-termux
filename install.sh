@@ -34,9 +34,10 @@ else
 	esac
 	
 	#Actual installation
-	ee "\e[32m[Downloading...] \e[34mopenjdk-11.0.1 for ${archname}..."
+	ee "\e[32m[Downloading...] \e[34mopenjdk-11.0.1 (248MB) for ${archname}..."
 	ee "\e[32m[Downloading...] Pleae wait for some time...."
-	wget https://github.com/MrAdityaAlok/openjdk-termux-11.0.1/releases/download/v1.0.0/openjdk-11.0.1.tar.gz
+	
+	wget https://github.com/MrAdityaAlok/openjdk-in-termux/releases/download/v1.0.0/openjdk-11.0.1.tar.gz
 	
 	ee "\e[32m[*] \e[34mMoving JDK to system..."
 	mv openjdk-11.0.1.tar.gz $PREFIX/share
