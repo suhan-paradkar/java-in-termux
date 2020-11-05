@@ -37,6 +37,7 @@ else
 	ee "\e[32m[Downloading...] \e[34mopenjdk-11.0.1 (248MB) for ${archname}..."
 	ee "\e[32m[Downloading...] Pleae wait for some time...."
 	
+	pkg install wget -y
 	wget https://github.com/MrAdityaAlok/openjdk-in-termux/releases/download/v1.0.0/openjdk-11.0.1.tar.gz
 	
 	ee "\e[32m[*] \e[34mMoving JDK to system..."
