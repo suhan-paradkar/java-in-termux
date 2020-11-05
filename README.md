@@ -1,5 +1,5 @@
 # Java(openjdk-11.0.1) in Termux
-This script will try to install java(openjdk-11.0.1) in termux
+This script will install java(openjdk-11.0.1) in termux
 # Installation
 - git clone https://github.com/MrAdityaAlok/openjdk-in-termux.git
 - cd openjdk-in-termux
