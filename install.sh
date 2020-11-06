@@ -41,7 +41,7 @@ else
 
 	#pkg install wget -y
 	apt-get install wget -y #for docker
-	wget https://github.com/MrAdityaAlok/openjdk-in-termux/releases/download/v1.0.0/openjdk-11.0.1.tar.gz
+	wget https://github.com/MrAdityaAlok/java-in-termux/releases/download/v1.0.0/openjdk-11.0.1.tar.gz
 	wgetreturn=$?
 	if [[ $wgetreturn -eq 0 ]]
 	then
