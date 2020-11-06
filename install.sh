@@ -21,15 +21,15 @@ else
 	#Checking architecture
 	case $(dpkg --print-architecture) in
 	aarch64)
-		archname="aarch64"; tag="v1.0.0"; ex="tar.gz"; unpack="tar -xzvf" ;;
+		archname="aarch64"; tag="v1.0.0"; ex="tar.gz"; unpack="tar -xzvf"; file="openjdk-11.0.1" ;;
 	arm64)
-		archname="aarch64"; tag="v1.0.0"; ex="tar.gz"; unpack="tar -xzvf" ;;
+		archname="aarch64"; tag="v1.0.0"; ex="tar.gz"; unpack="tar -xzvf"; file="openjdk-11.0.1" ;;
 	armhf)
-		archname="arm"; tag="v1.0.0-arm"; ex="zip"; unpack="unzip" ;;
+		archname="arm"; tag="v1.0.0-arm"; ex="zip"; unpack="unzip"; file="jdk-11.0.8-ojdkbuild-linux-armhf" ;;
 	armv7l)
-		archname="arm"; tag="v1.0.0-arm"; ex="zip"; unpack="unzip" ;;
+		archname="arm"; tag="v1.0.0-arm"; ex="zip"; unpack="unzip"; file="jdk-11.0.8-ojdkbuild-linux-armhf" ;;
 	arm)
-		archname="arm"; tag="v1.0.0-arm"; ex="zip"; unpack="unzip" ;;
+		archname="arm"; tag="v1.0.0-arm"; ex="zip"; unpack="unzip"; file="jdk-11.0.8-ojdkbuild-linux-armhf" ;;
 	*)
 		ee "\e[91mERROR: Unknown architecture."; echo; exit ;;
 	esac
@@ -52,10 +52,10 @@ else
     	"$unpack" openjdk-11."$ex"
     	
     	ee "\e[32m[*] \e[34mSeting-up environment variable %JAVA_HOME%..."
-    	export JAVA_HOME=$PREFIX/share/openjdk-11
-    	echo "export JAVA_HOME=$PREFIX/share/openjdk-11" >> "$HOME"/.profile
-    	PATH=$PATH:$PREFIX/share/openjdk-11/bin
-    	echo "PATH=$PATH:$PREFIX/share/openjdk-11/bin" >> "$HOME"/.profile
+    	export JAVA_HOME=$PREFIX/share/"$file"
+    	echo "export JAVA_HOME=$PREFIX/share/"$file"" >> "$HOME"/.profile
+    	PATH=$PATH:$PREFIX/share/"$file"/bin
+    	echo "PATH=$PATH:$PREFIX/share/"$file"/bin" >> "$HOME"/.profile
     	cd "$HOME" || exit
     	
     	ee "\e[32m[*] \e[34mCleaning up temporary files..."
