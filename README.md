@@ -1,6 +1,13 @@
 # Java(openjdk-11) in Termux
 This script will install java(openjdk-11) in termux without root!!
 - Author - [@MrAdityaAlok](https://github.com/MrAdityaAlok)
+# Downloads Available for 
+- aarch64
+- arm64
+- armhf
+- armv7l
+- arm/arm32
+**You may check your architecture by `uname -a` command**
 # Installation
 - `git clone https://github.com/MrAdityaAlok/openjdk-in-termux.git`
 - `cd openjdk-in-termux`
