@@ -1,4 +1,4 @@
-version: 2
+version: 2.1
 jobs: # we now have TWO jobs, so that a workflow can coordinate them!
   one: # This is our first job.
     docker: # it uses the docker executor
@@ -9,11 +9,10 @@ jobs: # we now have TWO jobs, so that a workflow can coordinate them!
     # Steps are a list of commands to run inside the docker container above.
     steps:
       - checkout # this pulls code down from GitHub
-      - run: cd openjdk-in-termux # This prints "A first hello" to stdout.
+      - run: cd java-in-termux # This prints "A first hello" to stdout.
       - run: bash install.sh # a command telling the job to "sleep" for 25 seconds.
 # Under the workflows: map, we can coordinate our two jobs, defined above.
 workflows:
-  version: 2
   Installing_java: # this is the name of our workflow
     jobs: # and here we list the jobs we are going to run.
       - one
