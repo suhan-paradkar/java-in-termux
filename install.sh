@@ -35,7 +35,7 @@ else
 	esac
 	
 	#Actual installation
-	ee "\e[32m[*] \e[34mopenjdk-11 (248MB) for ${archname}..."
+	ee "\e[32m[*] \e[34mopenjdk-11 for ${archname}..."
 	ee "\e[32m[*] \e[34mPleae wait for some time....\e[0m"
 
 	pkg install wget -y
