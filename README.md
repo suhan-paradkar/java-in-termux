@@ -3,11 +3,11 @@ This script will install java(openjdk-11) in termux without root!!
 Java libraries compiled and edited by **MrAdityaAlok**
 - Author - [@MrAdityaAlok](https://github.com/MrAdityaAlok)
 # Downloads Available for 
-- aarch64
+- aarch64/armv8
 - arm64
 - armhf
 - armv7l
-- arm/arm32
+- arm/arm32/armv7/aarch32
 - **You may check your architecture by `uname -a` command**
 # Installation
 - `git clone https://github.com/MrAdityaAlok/java-in-termux.git`
