@@ -11,7 +11,7 @@ ee "\e[93mLibraries compiled and  scripted by \e[32mMrAdityaAlok."
 echo
 
 #Checking for existing Java installation
-if [ -e "$PREFIX"/bin/java ] || [ -e "$PREFIX"/share/openjdk-11/bin/java ]
+if [ -e "$PREFIX"/bin/java ] || [ -e "$PREFIX"/share/openjdk-11/bin/java ] || [ -e "$PREFIX"/share/jdk-11.0.8-ojdkbuild-linux-armhf/bin/java ]
 then
 	ee "\e[32mJava is already installed!"
 	java --version
