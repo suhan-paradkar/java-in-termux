@@ -1,4 +1,6 @@
-#!/data/data/com.termux/files/usr/bin/bash
+#!/bin/bash #for docker
+#/data/data/com.termux/files/usr/bin/bash
+
 
 #Setup
 shopt -s expand_aliases
@@ -11,9 +13,10 @@ ee "\e[93mLibraries compiled and  scripted by \e[32mMrAdityaAlok."
 echo
 
 #Checking for existing Java installation
-if [ -e "$PREFIX"/bin/java ]
+if [ -e "$PREFIX"/bin/java ] || [ -e "$PREFIX"/share/openjdk-11.0.1/bin/java ]
 then
 	ee "\e[32mJava is already installed!"
+	java --version
 	echo
 	exit
 else
@@ -37,17 +40,19 @@ else
 	ee "\e[32m[*] \e[34mopenjdk-11.0.1 (248MB) for ${archname}..."
 	ee "\e[32m[*] \e[34mPleae wait for some time....\e[0m"
 
-	pkg install wget -y
+	#pkg install wget -y
+	apt-get install wget -y #for docker
 	wget https://github.com/MrAdityaAlok/openjdk-in-termux/releases/download/v1.0.0/openjdk-11.0.1.tar.gz
 	wgetreturn=$?
 	if [[ $wgetreturn -eq 0 ]]
 	then
-    	ee "\e[32m[*] \e[34mMoving JDK to system..."
+        ee "\e[32m[*] \e[34mMoving JDK to system..."
     	mv openjdk-11.0.1.tar.gz "$PREFIX"/share
 	
     	ee "\e[32m[*] \e[34mExtracting JDK..."
     	cd "$PREFIX"/share || exit
-    	pkg install tar -y
+    	#pkg install tar -y
+    	apt-get install tar -y #for docker
     	tar -xzvf openjdk-11.0.1.tar.gz
     	
     	ee "\e[32m[*] \e[34mSeting-up environment variable %JAVA_HOME%..."
@@ -62,11 +67,11 @@ else
     
     	
     	echo
-    	ee "\e[32mJava was successfully installed!\e[0m"
-    	java --version
+    	ee "\e[32mJava was successfully installed!"
+    	ee "Check it by running \e[34mjava --version from terminal\e[0m"
     	echo
     else 
-    echo
+        echo
         ee "\e[31mwget exited with an error code : $wgetreturn"
         case $wgetreturn in
         1)
