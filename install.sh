@@ -1,6 +1,5 @@
 #!/bin/bash #for docker
 #/data/data/com.termux/files/usr/bin/bash
-#testing
 
 #Setup
 shopt -s expand_aliases
