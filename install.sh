@@ -1,5 +1,4 @@
-#!/bin/bash #for docker
-#/data/data/com.termux/files/usr/bin/bash
+#!/data/data/com.termux/files/usr/bin/bash
 
 #Setup
 shopt -s expand_aliases
@@ -7,12 +6,12 @@ alias ee='echo -e'
 
 #Greetings
 echo
-ee "\e[93mThis script will install openjdk-11.0.1 in Termux."
+ee "\e[93mThis script will install openjdk-11 in Termux."
 ee "\e[93mLibraries compiled and  scripted by \e[32mMrAdityaAlok."
 echo
 
 #Checking for existing Java installation
-if [ -e "$PREFIX"/bin/java ] || [ -e "$PREFIX"/share/openjdk-11.0.1/bin/java ]
+if [ -e "$PREFIX"/bin/java ] || [ -e "$PREFIX"/share/openjdk-11/bin/java ]
 then
 	ee "\e[32mJava is already installed!"
 	java --version
@@ -22,47 +21,45 @@ else
 	#Checking architecture
 	case $(dpkg --print-architecture) in
 	aarch64)
-		archname="aarch64" ;;
+		archname="aarch64"; tag="v1.0.0"; ex="tar.gz"; unpack="tar -xzvf" ;;
 	arm64)
-		archname="aarch64";;
+		archname="aarch64"; tag="v1.0.0"; ex="tar.gz"; unpack="tar -xzvf" ;;
 	armhf)
-		archname="arm" ;;
+		archname="arm"; tag="v1.0.0-arm"; ex="zip"; unpack="unzip" ;;
 	armv7l)
-		archname="arm" ;;
+		archname="arm"; tag="v1.0.0-arm"; ex="zip"; unpack="unzip" ;;
 	arm)
-		archname="arm" ;;
+		archname="arm"; tag="v1.0.0-arm"; ex="zip"; unpack="unzip" ;;
 	*)
 		ee "\e[91mERROR: Unknown architecture."; echo; exit ;;
 	esac
 	
 	#Actual installation
-	ee "\e[32m[*] \e[34mopenjdk-11.0.1 (248MB) for ${archname}..."
+	ee "\e[32m[*] \e[34mopenjdk-11 (248MB) for ${archname}..."
 	ee "\e[32m[*] \e[34mPleae wait for some time....\e[0m"
 
-	#pkg install wget -y
-	apt-get install wget -y #for docker
-	wget https://github.com/MrAdityaAlok/java-in-termux/releases/download/v1.0.0/openjdk-11.0.1.tar.gz
+	pkg install wget -y
+	wget https://github.com/MrAdityaAlok/java-in-termux/releases/download/"$tag"/openjdk-11."$ex"
 	wgetreturn=$?
 	if [[ $wgetreturn -eq 0 ]]
 	then
         ee "\e[32m[*] \e[34mMoving JDK to system..."
-    	mv openjdk-11.0.1.tar.gz "$PREFIX"/share
+    	mv openjdk-11."$ex" "$PREFIX"/share
 	
     	ee "\e[32m[*] \e[34mExtracting JDK..."
     	cd "$PREFIX"/share || exit
-    	#pkg install tar -y
-    	apt-get install tar -y #for docker
-    	tar -xzvf openjdk-11.0.1.tar.gz
+    	pkg install tar unzip -y
+    	"$unpack" openjdk-11."$ex"
     	
     	ee "\e[32m[*] \e[34mSeting-up environment variable %JAVA_HOME%..."
-    	export JAVA_HOME=$PREFIX/share/openjdk-11.0.1
-    	echo "export JAVA_HOME=$PREFIX/share/openjdk-11.0.1" >> "$HOME"/.profile
-    	PATH=$PATH:$PREFIX/share/openjdk-11.0.1/bin
-    	echo "PATH=$PATH:$PREFIX/share/openjdk-11.0.1/bin" >> "$HOME"/.profile
+    	export JAVA_HOME=$PREFIX/share/openjdk-11
+    	echo "export JAVA_HOME=$PREFIX/share/openjdk-11" >> "$HOME"/.profile
+    	PATH=$PATH:$PREFIX/share/openjdk-11/bin
+    	echo "PATH=$PATH:$PREFIX/share/openjdk-11/bin" >> "$HOME"/.profile
     	cd "$HOME" || exit
     	
     	ee "\e[32m[*] \e[34mCleaning up temporary files..."
-    	rm -rf "$PREFIX"/share/openjdk-11.0.1.tar.gz
+    	rm -rf "$PREFIX"/share/openjdk-11."$ex"
     
     	
     	echo
@@ -99,7 +96,7 @@ else
             ;;
         esac
         
-        rm -rf openjdk-11.0.1.tar.gz
+        rm -rf openjdk-11."$ex"
         echo
         exit
     fi
