@@ -1,12 +1,11 @@
 # Java(openjdk-11.0.1) in Termux
-This script will install java(openjdk-11.0.1) in termux
+This script will install java(openjdk-11.0.1) in termux without root!!
 - Author - [@MrAdityaAlok](https://github.com/MrAdityaAlok)
 # Installation
-```git clone https://github.com/MrAdityaAlok/openjdk-in-termux.git
-cd openjdk-in-termux
-chmod +x install.sh
-./install.sh
-```
+- `git clone https://github.com/MrAdityaAlok/openjdk-in-termux.git`
+- `cd openjdk-in-termux`
+- `chmod +x install.sh`
+- `./install.sh`
 - Your java will be installed, check it by running `java --version` command from terminal
 - Package is about 248MB and needs constant internet for proper installation
 
