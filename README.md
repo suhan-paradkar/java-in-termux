@@ -18,11 +18,8 @@ Java libraries compiled and edited by **MrAdityaAlok**
 - Package is a bit long  and needs constant internet for proper installation
 
 # Uninstall
-To uninstall follow these instructions 
-- `rm -rf $PREFIX/share/openjdk-11`
-- edit file `$HOME/.profile` and remove the following lines 
-- `export JAVA_HOME=$PREFIX/share/openjdk-11` **and**
-- `PATH=$PATH:$PREFIX/share/openjdk-11/bin`
+To uninstall : 
+- remove either `openjdk-11.0.1` or `jdk-11.0.8-ojdkbuild-linux-armhf` (file depending on installation), from `HOME` directory
 
 # Issues ??
 Feel free to create an issue in github
