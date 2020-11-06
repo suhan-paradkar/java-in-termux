@@ -1,4 +1,4 @@
-version: 2.1
+version: 2
 jobs: # we now have TWO jobs, so that a workflow can coordinate them!
   one: # This is our first job.
     docker: # it uses the docker executor
@@ -13,6 +13,7 @@ jobs: # we now have TWO jobs, so that a workflow can coordinate them!
       - run: bash install.sh # a command telling the job to "sleep" for 25 seconds.
 # Under the workflows: map, we can coordinate our two jobs, defined above.
 workflows:
+  version:2
   Installing_java: # this is the name of our workflow
     jobs: # and here we list the jobs we are going to run.
       - one
