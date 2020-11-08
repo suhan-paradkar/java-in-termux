@@ -21,7 +21,7 @@ Hello folks, this script will install java(openjdk-11) in termux without root!
 # Uninstall
 To uninstall : 
 - remove either `openjdk-11.0.1` or `jdk-11.0.8-ojdkbuild-linux-armhf` file (depending on installation) from `$PREFIX/share` directory
-- then edit `$HOME/.profile` file and remove lines starting with:
+- then edit `$HOME/.profile` file and remove lines containing:
 - `export JAVA_HOME=/data/data/com.termux/files/usr/{*either of above mentioned file*}` **and**
 - `PATH=/data/data/com.termux/files/usr/share/{*either of above mentioned file*}/bin`
 - **after all this Please restart termux**
