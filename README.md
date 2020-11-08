@@ -1,6 +1,7 @@
 # Java (openjdk-11) in Termux
 Hello folks, this script will install java(openjdk-11) in termux without root!
-Java libraries compiled and edited by **MrAdityaAlok**
+
+- Java libraries compiled and edited by **MrAdityaAlok**
 - Author - [@MrAdityaAlok](https://github.com/MrAdityaAlok)
 # Downloads Available for 
 - aarch64/armv8
