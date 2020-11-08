@@ -24,7 +24,7 @@ To uninstall :
 - then edit `$HOME/.profile` file and remove lines starting with:
 - `export JAVA_HOME=/data/data/com.termux/files/usr/{*either of above mentioned file*}` **and**
 - `PATH=/data/data/com.termux/files/usr/share/{*either of above mentioned file*}/bin`
-_ **after all this Please restart termux**
+- **after all this Please restart termux**
 
 # Issues ??
 Feel free to create an issue in github
