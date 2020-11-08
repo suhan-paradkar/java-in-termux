@@ -11,7 +11,7 @@ ee "\e[93mLibraries compiled and  scripted by \e[32mMrAdityaAlok."
 echo
 
 #Checking for existing Java installation
-if [ -e "$PREFIX"/bin/java ] || [ -e $HOME/openjdk-11.0.1/bin/java ] || [ -e $HOME/jdk-11.0.8-ojdkbuild-linux-armhf/bin/java ]
+if [ -e "$PREFIX"/bin/java ] || [ -e "$PREFIX"/share/openjdk-11.0.1/bin/java ] || [ -e "$PREFIX"/share/jdk-11.0.8-ojdkbuild-linux-armhf/bin/java ]
 then
 	ee "\e[32mJava is already installed!"
 	java --version
@@ -35,7 +35,7 @@ else
 	esac
 	
 	#Actual installation
-	ee "\e[32m[*] \e[34mopenjdk-11 for ${archname}..."
+	ee "\e[32m[*] \e[34mInstalling openjdk-11 for ${archname}..."
 	ee "\e[32m[*] \e[34mPleae wait for some time....\e[0m"
 
 	pkg install wget -y
@@ -44,22 +44,22 @@ else
 	if [[ $wgetreturn -eq 0 ]]
 	then
         ee "\e[32m[*] \e[34mMoving JDK to system..."
-    	mv openjdk-11."$ex" $HOME
+    	mv openjdk-11."$ex" "$PREFIX"/share
 	
-    	ee "\e[32m[*] \e[34mExtracting JDK..."
-    	cd $HOME || exit
+    	ee "\e[32m[*] \e[34mExtracting JDK to "$PREFIX"/share "
+    	cd "$PREFIX"/share || exit
     	pkg install tar unzip -y
     	"$unpack" openjdk-11."$ex"
     	
     	ee "\e[32m[*] \e[34mSeting-up environment variable %JAVA_HOME%..."
-    	export JAVA_HOME=$HOME/"$file"
-    	echo "export JAVA_HOME=$HOME/"$file"" >> "$HOME"/.profile
-    	PATH=$PATH:$HOME/"$file"/bin
-    	echo "PATH=$PATH:$HOME/"$file"/bin" >> "$HOME"/.profile
+    	export JAVA_HOME="$PREFIX"/share/"$file"
+    	echo "export JAVA_HOME="$PREFIX"/share/"$file"" >> "$HOME"/.profile
+    	PATH=$PATH:"$PREFIX"/share/"$file"/bin
+    	echo "PATH=$PATH:"$PREFIX"/share/"$file"/bin" >> "$HOME"/.profile
     	cd "$HOME" || exit
     	
     	ee "\e[32m[*] \e[34mCleaning up temporary files..."
-    	rm -rf $HOME/openjdk-11."$ex"
+    	rm -rf "$PREFIX"/share/openjdk-11."$ex"
     
     	
     	echo
