@@ -19,7 +19,7 @@ Java libraries compiled and edited by **MrAdityaAlok**
 
 # Uninstall
 To uninstall : 
-- remove either `openjdk-11.0.1` or `jdk-11.0.8-ojdkbuild-linux-armhf` (file depending on installation), from `HOME` directory
+- remove either `openjdk-11.0.1` or `jdk-11.0.8-ojdkbuild-linux-armhf` (file depending on installation), from `$PREFIX/share` directory
 
 # Issues ??
 Feel free to create an issue in github
