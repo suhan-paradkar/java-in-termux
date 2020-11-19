@@ -46,16 +46,16 @@ else
         ee "\e[32m[*] \e[34mMoving JDK to system..."
     	mv openjdk-11."$ex" "$PREFIX"/share
 	
-    	ee "\e[32m[*] \e[34mExtracting JDK to "$PREFIX"/share "
+    	ee "\e[32m[*] \e[34mExtracting JDK to ""$PREFIX""/share "
     	cd "$PREFIX"/share || exit
     	pkg install tar unzip -y
     	"$unpack" openjdk-11."$ex"
     	
     	ee "\e[32m[*] \e[34mSeting-up environment variable %JAVA_HOME%..."
     	export JAVA_HOME="$PREFIX"/share/"$file"
-    	echo "export JAVA_HOME="$PREFIX"/share/"$file"" >> "$HOME"/.profile
+    	echo "export JAVA_HOME=""$PREFIX""/share/""$file"" " >> "$HOME"/.profile
     	PATH=$PATH:"$PREFIX"/share/"$file"/bin
-    	echo "PATH=$PATH:"$PREFIX"/share/"$file"/bin" >> "$HOME"/.profile
+    	echo "PATH=$PATH:""$PREFIX""/share/""$file""/bin" >> "$HOME"/.profile
     	cd "$HOME" || exit
     	
     	ee "\e[32m[*] \e[34mCleaning up temporary files..."
