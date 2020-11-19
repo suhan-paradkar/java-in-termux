@@ -31,7 +31,7 @@ else
 	arm)
 		archname="arm"; tag="v1.0.0-arm"; ex="zip"; unpack="unzip"; file="jdk-11.0.8-ojdkbuild-linux-armhf" ;;
 	*)
-		ee "\e[91mERROR: Unknown architecture."; echo; exit ;;
+		ee "\e[91mERROR: Unknown architecture.\e[0m"; echo; exit ;;
 	esac
 	
 	#Actual installation
