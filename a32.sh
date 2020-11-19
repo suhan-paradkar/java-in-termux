@@ -34,7 +34,7 @@ wgetreturn=$?
     tar -xvf jdk8_${archname}.tar.gz
 
     ee "\e[32m[*] \e[34mSeting-up %JAVA_HOME%..."
-    export JAVA_HOME= $PREFIX/share/jdk8
+    export JAVA_HOME=$PREFIX/share/jdk8
     echo "export JAVA_HOME=$PREFIX/share/jdk8" >> $HOME/.profile
     PATH=$PREFIX/share/jdk8/bin:$PATH
     echo "PATH=$PREFIX/share/jdk8/bin:$PATH" >> $HOME/.profile
