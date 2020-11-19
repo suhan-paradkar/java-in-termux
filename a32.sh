@@ -8,8 +8,6 @@ alias ee='echo -e'
 echo
 ee "\e[93mThis script will install Java(jdk8) in Termux."
 echo
-java
-found=$?
 #Checking for existing Java installation
 if [ -e "$PREFIX"/bin/java ] || [ -e "$PREFIX"/share/openjdk-11.0.1/bin/java ] || [ -e "$PREFIX"/share/jdk8/bin/java ]
 then
@@ -17,11 +15,11 @@ ee "\e[32mJava is already installed!\e[0m"
 echo
 exit
 else
-archname=$(dpkg --print-architecture)
-tag= "v8-151"
+archname="arm"
+tag="v8-151"
 
 #Actual installation
-ee "\e[32m[*] \e[34mDownloading JDK-8 for ${archname}..."
+ee "\e[32m[*] \e[34mDownloading JDK-8 for $(dpkg --print-architecture)..."
 wget https://github.com/Hax4us/java/releases/download/${tag}/jdk8_${archname}.tar.gz
 
 wgetreturn=$?
