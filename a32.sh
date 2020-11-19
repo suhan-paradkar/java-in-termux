@@ -19,7 +19,8 @@ archname="arm"
 tag="v8-151"
 
 #Actual installation
-ee "\e[32m[*] \e[34mDownloading JDK-8 for $(dpkg --print-architecture)..."
+ee "\e[32m[*] \e[34mDownloading JDK-8 for $(dpkg --print-architecture)...\e[0m"
+pkg install wget tar -y
 wget https://github.com/Hax4us/java/releases/download/${tag}/jdk8_${archname}.tar.gz
 
 wgetreturn=$?
@@ -43,7 +44,7 @@ wgetreturn=$?
 
     echo
     ee "\e[32mJava was successfully installed!\e[39m"
-    echo "Enjoy your new, tasty Java"
+    echo "Enjoy your new, tasty Java\e[0m"
     echo
     echo                                                
     else
