@@ -54,6 +54,7 @@ else
     	echo
     	ee "\e[32mJava was successfully installed!"
     	ee "Check it by running \e[34mjava --version from terminal\e[0m"
+	ee "\e[32m Note : You must restart termux by exiting or start a new instance of termux, in order to load java command \e[0m"
     	echo
     else 
         echo
