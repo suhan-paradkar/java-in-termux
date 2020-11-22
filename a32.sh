@@ -30,7 +30,7 @@ wgetreturn=$?
     mv jdk8_${archname}.tar.gz "$PREFIX"/share
 
     ee "\e[32m[*] \e[34mExtracting JDK..."
-    cd "$PREFIX"share || exit
+    cd "$PREFIX"/share || exit
     tar -xvf jdk8_${archname}.tar.gz
 
     ee "\e[32m[*] \e[34mSeting-up %JAVA_HOME%..."
