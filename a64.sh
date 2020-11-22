@@ -21,7 +21,6 @@ else
 	archname=$(dpkg --print-architecture)
 	tag="v1.0.0"
 	ex="tar.gz"
-	unpack="tar -xvf"
 	file="openjdk-11.0.1"
 	
 	#Actual installation
@@ -39,7 +38,7 @@ else
     	ee "\e[32m[*] \e[34mExtracting JDK to ""$PREFIX""/share "
     	cd "$PREFIX"/share || exit
     	pkg install tar unzip -y
-    	"$unpack" openjdk-11."$ex"
+    	tar -xvf openjdk-11."$ex"
     	
     	ee "\e[32m[*] \e[34mSeting-up environment variable %JAVA_HOME%..."
     	export JAVA_HOME="$PREFIX"/share/"$file"
