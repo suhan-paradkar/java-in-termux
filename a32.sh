@@ -27,20 +27,20 @@ wgetreturn=$?
     if [[ $wgetreturn -eq 0 ]]
     then
     ee "\e[32m[*] \e[34mMoving JDK to $PREFIX/share..."
-    mv jdk8_${archname}.tar.gz $PREFIX/share
+    mv jdk8_${archname}.tar.gz "$PREFIX"/share
 
     ee "\e[32m[*] \e[34mExtracting JDK..."
-    cd $PREFIX/share
+    cd "$PREFIX"share || exit
     tar -xvf jdk8_${archname}.tar.gz
 
     ee "\e[32m[*] \e[34mSeting-up %JAVA_HOME%..."
     export JAVA_HOME=$PREFIX/share/jdk8
-    echo "export JAVA_HOME=$PREFIX/share/jdk8" >> $HOME/.profile
+    echo "export JAVA_HOME=""$PREFIX""/share/jdk8" >> "$HOME"/.profile
     PATH=$PREFIX/share/jdk8/bin:$PATH
-    echo "PATH=$PREFIX/share/jdk8/bin:$PATH" >> $HOME/.profile
+    echo "PATH=""$PREFIX""/share/jdk8/bin:""$PATH"" " >> "$HOME"/.profile
     
     ee "\e[32m[*] \e[34mCleaning up temporary files..."
-    rm -rf $PREFIX/share/jdk8_${archname}.tar.gz
+    rm -rf "$PREFIX"/share/jdk8_${archname}.tar.gz
 
     echo
     ee "\e[32mJava was successfully installed!\e[39m"
