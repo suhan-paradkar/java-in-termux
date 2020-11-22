@@ -44,8 +44,8 @@ wgetreturn=$?
 
     echo
     ee "\e[32mJava was successfully installed!\e[39m"
-    echo "Enjoy your new, tasty Java\e[0m"
-    echo "\e[32m Note : You must restart termux by exiting or start a new instance of termux, in order to load java command \e[0m"
+    ee "Enjoy your new, tasty Java\e[0m"
+    ee "\e[32m Note : You must restart termux by exiting or start a new instance of termux, in order to load java command \e[0m"
     echo
     echo                                                
     else
