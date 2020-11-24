@@ -25,6 +25,7 @@ Hello folks, this script will install java(openjdk) in termux without root!
 - `./install.sh`
 - Java will be installed, check it by running `java --version` command from terminal
 - Package is a bit long  and needs constant internet for proper installation
+- Restart termux after installation
 
 # Uninstall
 
