@@ -36,7 +36,7 @@ To uninstall :
 - **after all this Please restart termux**
 
 # Issues ??
-Feel free to create an issue in github
+[Feel free to create an issue in github](https://github.com/MrAdityaAlok/java-in-termux/issues/new)
 
 # Note
 - binary for arm32 is by [Hax4us](https://github.com/Hax4us/java)
