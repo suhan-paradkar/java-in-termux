@@ -1,4 +1,4 @@
-# Java (openjdk) in Termux  
+# Java (openjdk) in Termux        [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FMrAdityaAlok%2Fjava-in-termux&count_bg=%2367CB1B&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 Hello folks, this script will install java(openjdk) in termux without root!
 
 **Note: openjdk-11.0.1 for 64-bit cpu while openjdk-8 for 32-bit cpu**
