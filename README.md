@@ -36,7 +36,7 @@ To uninstall :
 - `PATH=/data/data/com.termux/files/usr/share/{*either of above mentioned file*}/bin`
 - **after all this Please restart termux**
 
-# Issues ??
+# Support
 [Feel free to ask in **discussion**](https://github.com/MrAdityaAlok/java-in-termux/discussions)
 
 # Note
