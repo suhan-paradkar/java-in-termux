@@ -41,4 +41,3 @@ To uninstall :
 
 # Note
 - binary for arm32 is by [Hax4us](https://github.com/Hax4us/java)
-<img src="https://hc-ping.com/3ab4b4e6-2d72-46df-bb90-d5baf7ccd1a9" />
