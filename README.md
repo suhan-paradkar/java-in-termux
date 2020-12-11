@@ -41,5 +41,4 @@ To uninstall :
 
 # Note
 - binary for arm32 is by [Hax4us](https://github.com/Hax4us/java)
-![v](https://visitor-badge.glitch.me/badge?page_id=mradityaalok.java-in-termux)
 
