@@ -39,6 +39,3 @@ To uninstall :
 # Support
 [Feel free to ask in **discussion**](https://github.com/MrAdityaAlok/java-in-termux/discussions)
 
-# Note
-- binary for arm32 is by [Hax4us](https://github.com/Hax4us/java)
-
