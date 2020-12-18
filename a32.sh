@@ -16,31 +16,29 @@ echo
 exit
 else
 archname="arm"
-tag="v8-151"
-
 #Actual installation
 ee "\e[32m[*] \e[34mDownloading JDK-8 for $(dpkg --print-architecture)...\e[0m"
 pkg install wget tar -y
-wget https://github.com/Hax4us/java/releases/download/${tag}/jdk8_${archname}.tar.gz
+wget https://github.com/MrAdityaAlok/java-in-termux/releases/download/v1.0.1/jdk8_arm.tar.gz
 
 wgetreturn=$?
     if [[ $wgetreturn -eq 0 ]]
     then
     ee "\e[32m[*] \e[34mMoving JDK to $PREFIX/share..."
-    mv jdk8_${archname}.tar.gz "$PREFIX"/share
+    mv jdk8_arm.tar.gz "$PREFIX"/share
 
     ee "\e[32m[*] \e[34mExtracting JDK..."
     cd "$PREFIX"/share || exit
-    tar -xvf jdk8_${archname}.tar.gz
+    tar -xvf jdk8_arm.tar.gz
 
     ee "\e[32m[*] \e[34mSeting-up %JAVA_HOME%..."
     export JAVA_HOME=$PREFIX/share/jdk8
-    echo "export JAVA_HOME=""$PREFIX""/share/jdk8" >> "$HOME"/.profile
+    echo "export JAVA_HOME=""$PREFI/X""/share/jdk8" >> "$HOME"/.profile
     PATH=$PREFIX/share/jdk8/bin:$PATH
     echo "PATH=""$PREFIX""/share/jdk8/bin:""$PATH"" " >> "$HOME"/.profile
     
     ee "\e[32m[*] \e[34mCleaning up temporary files..."
-    rm -rf "$PREFIX"/share/jdk8_${archname}.tar.gz
+    rm -rf "$PREFIX"/share/jdk8_arm.tar.gz
 
     echo
     ee "\e[32mJava was successfully installed!\e[39m"
@@ -77,7 +75,7 @@ wgetreturn=$?
             ;;
         esac
 
-        rm -rf jdk8_${archname}.tar.gz
+        rm -rf jdk8_arm.tar.gz
         echo
         exit
     fi
