@@ -26,7 +26,7 @@ _Note : all above cpu is 32-bit and uses same binary(jdk)_
 - `cd java-in-termux`
 - `chmod +x install.sh`
 
-**Note: To install jdk8 for 64-bit cpu's (you may find above) use** './install.sh 8'
+**Note: To install jdk8 for 64-bit cpu's (you may find above) use**  `./install.sh  8`
 
 - `./install.sh`
 - Java will be installed, check it by running `java --version` command from terminal
