@@ -1,5 +1,11 @@
 #!/data/data/com.termux/files/usr/bin/bash
-	case $(dpkg --print-architecture) in
+
+jdk_eight(){
+  FILE=i8.sh  
+}
+
+rest(){
+case $(dpkg --print-architecture) in
 	aarch64)
 		FILE=a64.sh;;
 	arm64)
@@ -13,6 +19,15 @@
 	*)
 		ee "\e[91mERROR: Unknown architecture.\e[0m"; echo; exit ;;
 	esac
-	
-	chmod +x $FILE
-	bash $FILE
+}
+
+arg=$1
+if [[ $arg == 8 ]]; then
+  jdk_eight
+else
+  rest
+fi
+
+chmod +x $FILE
+bash $FILE
+
