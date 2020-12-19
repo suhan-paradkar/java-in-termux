@@ -8,14 +8,26 @@ alias ee='echo -e'
 echo
 ee "\e[93mThis script will install Java(jdk8) in Termux."
 echo
+
 #Checking for existing Java installation
 if [ -e "$PREFIX"/bin/java ] || [ -e "$PREFIX"/share/openjdk-11.0.1/bin/java ] || [ -e "$PREFIX"/share/jdk8/bin/java ]
 then
-ee "\e[32mJava is already installed!\e[0m"
-echo
-exit
+   ee "\e[32mJava is already installed"
+   ee "\e[32mInstalling multiple versions of jdk may break your java-environment variables....\e[0m"
+   read -p "continue only if you know how to manage them. Continue (y/n): " choice
+    if [[ $choice == y ]]; then 
+     install_jdk
+    else
+      ee "Aborted by user"
+      echo
+      exit
+    fi
 else
+  install_jdk
+fi
 
+
+install_jdk(){
 #Actual installation
 ee "\e[32m[*] \e[34mDownloading JDK-8 for $(dpkg --print-architecture)...\e[0m"
 pkg install wget tar -y
@@ -80,4 +92,4 @@ wgetreturn=$?
         exit
     fi
     
-fi
+}
