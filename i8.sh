@@ -85,12 +85,13 @@ if [ -e "$PREFIX"/bin/java ] || [ -e "$PREFIX"/share/openjdk-11.0.1/bin/java ] |
 then
    ee "\e[32mJava is already installed"
    ee "\e[32mInstalling multiple versions of jdk may break your java-environment variables....\e[0m"
-   read -p "continue only if you know how to manage them. Continue (y/n): " choice
-    if [[ $choice == y ]]; then 
+   echo
+   read -p "continue only if you know how to manage them. Continue? (y/n): " choice
+    if [[ $choice == y || $choice == Y ]]; then 
      install_jdk
     else
-      ee "Aborted by user"
       echo
+      ee "Aborted by user"
       exit
     fi
 else
