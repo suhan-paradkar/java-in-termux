@@ -9,22 +9,6 @@ echo
 ee "\e[93mThis script will install Java(jdk8) in Termux."
 echo
 
-#Checking for existing Java installation
-if [ -e "$PREFIX"/bin/java ] || [ -e "$PREFIX"/share/openjdk-11.0.1/bin/java ] || [ -e "$PREFIX"/share/jdk8/bin/java ]
-then
-   ee "\e[32mJava is already installed"
-   ee "\e[32mInstalling multiple versions of jdk may break your java-environment variables....\e[0m"
-   read -p "continue only if you know how to manage them. Continue (y/n): " choice
-    if [[ $choice == y ]]; then 
-     install_jdk
-    else
-      ee "Aborted by user"
-      echo
-      exit
-    fi
-else
-  install_jdk
-fi
 
 
 install_jdk(){
@@ -93,3 +77,22 @@ wgetreturn=$?
     fi
     
 }
+
+
+
+#Checking for existing Java installation
+if [ -e "$PREFIX"/bin/java ] || [ -e "$PREFIX"/share/openjdk-11.0.1/bin/java ] || [ -e "$PREFIX"/share/jdk8/bin/java ]
+then
+   ee "\e[32mJava is already installed"
+   ee "\e[32mInstalling multiple versions of jdk may break your java-environment variables....\e[0m"
+   read -p "continue only if you know how to manage them. Continue (y/n): " choice
+    if [[ $choice == y ]]; then 
+     install_jdk
+    else
+      ee "Aborted by user"
+      echo
+      exit
+    fi
+else
+  install_jdk
+fi
