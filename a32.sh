@@ -15,7 +15,7 @@ ee "\e[32mJava is already installed!\e[0m"
 echo
 exit
 else
-archname="arm"
+
 #Actual installation
 ee "\e[32m[*] \e[34mDownloading JDK-8 for $(dpkg --print-architecture)...\e[0m"
 pkg install wget tar -y
