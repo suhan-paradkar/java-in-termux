@@ -58,3 +58,6 @@ PATH=/data/data/com.termux/files/usr/share/{either of above mentioned file}/bin
 # Support 
 
 [Feel free to ask in **discussion**](https://github.com/MrAdityaAlok/java-in-termux/discussions)
+# Note
+Jdk 8 is by [Hax4us](https://github.com/Hax4us/java)
+Jdk 11 is by AIDE app , which can be found [here](https://t.me/s/aide_mod)
