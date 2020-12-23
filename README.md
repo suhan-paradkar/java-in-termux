@@ -1,4 +1,4 @@
-# Sorry! But due to comments from Termux moderators I have to close this repo.
+# Sorry! But due to comments from Termux moderators, I have to close this repo.
 
 
 
