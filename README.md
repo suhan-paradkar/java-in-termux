@@ -1,8 +1,3 @@
-# Sorry! But due to comments from Termux moderators, I have to close this repo.
-
-
-
-
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FMrAdityaAlok%2Fjava-in-termux&count_bg=%2367CB1B&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=true)](https://hits.seeyoufarm.com)
 
 # Hello👋, folks
@@ -67,4 +62,4 @@ PATH=/data/data/com.termux/files/usr/share/{either of above mentioned file}/bin
 [Feel free to ask in **discussion**](https://github.com/MrAdityaAlok/java-in-termux/discussions)
 # Note
 - Jdk 8 is by [Hax4us](https://github.com/Hax4us/java)
-- Jdk 11 is by AIDE app , which can be found [here](https://t.me/s/aide_mod)
+- Jdk 11 is from a telegram channel, which can be found [here](https://t.me/s/aide_mod)
