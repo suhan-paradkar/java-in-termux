@@ -58,4 +58,4 @@ PATH=/data/data/com.termux/files/usr/share/{either of above mentioned file}/bin
 # Note
 - I have not compiled jdk, just wrote script
 - Jdk 8 is by [Hax4us](https://github.com/Hax4us/java), and of course I took the [permission](https://photos.app.goo.gl/8U76Lxapakn3ZQws6)
-- Jdk 11 is from a telegram channel, which can be found [here](https://t.me/s/aide_mod)
+- Jdk 11 is from jvdroid app, with permission (GPL license)
