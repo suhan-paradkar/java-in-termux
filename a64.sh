@@ -7,7 +7,6 @@ alias ee='echo -e'
 #Greetings
 echo
 ee "\e[93mThis script will install openjdk-11 in Termux."
-ee "\e[93mLibraries compiled and  scripted by \e[32mMrAdityaAlok."
 echo
 
 #Checking for existing Java installation
