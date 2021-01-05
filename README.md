@@ -3,7 +3,7 @@
 # Hello👋, folks
 Today I bring to you a script to install java in [Termux](https://termux.com) without root!
 
-**Availability: openjdk-11.0.1/jdk-8 for 64-bit cpu's while only jdk-8 for 32-bit cpu's**
+**Availability: openjdk-11.0.1 for 64-bit cpu's while only jdk-8 for 32-bit cpu's**
 
 # Downloads Available for
 
@@ -27,11 +27,7 @@ git clone https://github.com/MrAdityaAlok/java-in-termux.git
 cd java-in-termux
 chmod +x install.sh
 ```
-**To install jdk8 for 64-bit cpu's (cpu list above) use**
-```
-./install.sh  8
-```
-**else**
+**and**
 
 ```
  ./install.sh
