@@ -19,7 +19,7 @@ else
 #Actual installation
 ee "\e[32m[*] \e[34mDownloading JDK-8 for $(dpkg --print-architecture)...\e[0m"
 pkg install wget tar -y
-wget https://github.com/MrAdityaAlok/java-in-termux/releases/download/v1.0.1/jdk8_arm.tar.gz
+wget https://github.com/Hax4us/java/releases/download/v8-151/jdk8_arm.tar.gz
 
 wgetreturn=$?
     if [[ $wgetreturn -eq 0 ]]
