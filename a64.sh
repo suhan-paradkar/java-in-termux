@@ -18,42 +18,24 @@ then
 	exit
 else
 	archname=$(dpkg --print-architecture)
-	tag="v1.0.0"
-	ex="tar.gz"
-	file="openjdk-11.0.1"
+	tag="v2.0"
+	ex="deb"
+	file="openjdk11"
 	
 	#Actual installation
 	ee "\e[32m[*] \e[34mInstalling openjdk-11 for ${archname}..."
-	ee "\e[32m[*] \e[34mPleae wait for some time....\e[0m"
+	ee "\e[32m[*] \e[34mPlease wait for some time....\e[0m"
 
 	pkg install wget -y
-	wget https://github.com/MrAdityaAlok/java-in-termux/releases/download/"$tag"/openjdk-11."$ex"
+	wget https://github.com/suhan-paradkar/java-in-termux/releases/download/"$tag"/openjdk11."$ex"
 	wgetreturn=$?
 	if [[ $wgetreturn -eq 0 ]]
 	then
-        ee "\e[32m[*] \e[34mMoving JDK to system..."
-    	mv openjdk-11."$ex" "$PREFIX"/share
-	
-    	ee "\e[32m[*] \e[34mExtracting JDK to ""$PREFIX""/share "
-    	cd "$PREFIX"/share || exit
-    	pkg install tar unzip -y
-    	tar -xvf openjdk-11."$ex"
-    	
-    	ee "\e[32m[*] \e[34mSeting-up environment variable %JAVA_HOME%..."
-    	export JAVA_HOME="$PREFIX"/share/"$file"
-    	echo "export JAVA_HOME=""$PREFIX""/share/""$file"" " >> "$HOME"/.profile
-    	PATH=$PATH:"$PREFIX"/share/"$file"/bin
-    	echo "PATH=$PATH:""$PREFIX""/share/""$file""/bin" >> "$HOME"/.profile
-    	cd "$HOME" || exit
-    	
-    	ee "\e[32m[*] \e[34mCleaning up temporary files..."
-    	rm -rf "$PREFIX"/share/openjdk-11."$ex"
-    
+        dpkg -i openjdk11."$ex"
     	
     	echo
     	ee "\e[32mJava was successfully installed!"
-    	ee "Check it by running \e[34mjava --version from terminal\e[0m"
-	ee "\e[32m Note : You must restart termux by exiting or start a new instance of termux, in order to load java command \e[0m"
+    	ee "Check it by running \e[34mjava --version from terminal after restarting termux\e[0m
     	echo
     else 
         echo
@@ -85,7 +67,7 @@ else
             ;;
         esac
         
-        rm -rf openjdk-11."$ex"
+       
         echo
         exit
     fi
