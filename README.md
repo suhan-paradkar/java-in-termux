@@ -39,5 +39,5 @@ chmod +x install.sh
 
 # Note
 - I have not compiled jdk, just wrote script
-- Jdk 8 is by [Hax4us](https://github.com/Hax4us/java), and of course I took the [permission](https://photos.app.goo.gl/8U76Lxapakn3ZQws6)
-- Jdk 11 is from jvdroid app, with permission (GPL license)
+- Jdk 8 is by [Hax4us](https://github.com/Hax4us/java)
+- Jdk 11 is from JVDroid app, with permission (GPL license)
