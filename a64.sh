@@ -27,7 +27,7 @@ else
 	ee "\e[32m[*] \e[34mPlease wait for some time....\e[0m"
 
 	pkg install wget -y
-	wget https://github.com/suhan-paradkar/java-in-termux/releases/download/"$tag"/openjdk11."$ex"
+	wget https://github.com/suhan-paradkar/java-in-termux/releases/download/v2.0/openjdk11.deb
 	wgetreturn=$?
 	if [[ $wgetreturn -eq 0 ]]
 	then
