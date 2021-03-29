@@ -23,7 +23,7 @@ _Note : all above cpu is 32-bit and uses same binary(jdk)_
 
 # Installation
 ```
-git clone https://github.com/MrAdityaAlok/java-in-termux.git
+git clone https://github.com/suhan-paradkar/java-in-termux.git
 cd java-in-termux
 chmod +x install.sh
 ```
@@ -36,20 +36,6 @@ chmod +x install.sh
 - Package is a bit long and needs constant internet for proper installation
 - Restart termux after installation
 
-# Uninstall
-
-To uninstall :
-
-- remove either `openjdk-11.0.1` or `jdk8` file (depending on installation) from `$PREFIX/share` directory
-- then edit `$HOME/.profile` file and remove lines containing:
-```
-export JAVA_HOME=/data/data/com.termux/files/usr/{either of above mentioned file}
-```
- **and**
-```
-PATH=/data/data/com.termux/files/usr/share/{either of above mentioned file}/bin
-```
-- **after this Please restart termux**
 
 # Note
 - I have not compiled jdk, just wrote script
