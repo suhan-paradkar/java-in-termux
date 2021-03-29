@@ -1,6 +1,6 @@
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FMrAdityaAlok%2Fjava-in-termux&count_bg=%2367CB1B&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=true)](https://hits.seeyoufarm.com)
 
-# Hello👋, folks
+# Hello, People,
 Today I bring to you a script to install java in [Termux](https://termux.com) without root!
 
 **Availability: openjdk-11.0.1 for 64-bit cpu's while only jdk-8 for 32-bit cpu's**
@@ -33,7 +33,7 @@ chmod +x install.sh
  ./install.sh
 ```
 - Java will be installed, check it by running `java --version` command from terminal
-- Package is a bit long and needs constant internet for proper installation
+- Package is about 200+MB(jdk11) or 80MB(jdk8) and needs constant internet for proper installation
 - Restart termux after installation
 
 
