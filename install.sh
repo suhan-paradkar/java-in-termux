@@ -16,6 +16,8 @@ case $(dpkg --print-architecture) in
 		FILE=a32.sh  ;;
 	arm)
 		FILE=a32.sh  ;;
+        armv8l)
+                FILE=a32.sh  ;;
 	*)
 		ee "\e[91mERROR: Unknown architecture.\e[0m"; echo; exit ;;
 	esac
