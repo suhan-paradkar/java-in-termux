@@ -1,4 +1,4 @@
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FMrAdityaAlok%2Fjava-in-termux&count_bg=%2367CB1B&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=true)](https://hits.seeyoufarm.com)
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fsuhan-paradkar%2Fjava-in-termux&count_bg=%2367CB1B&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=true)](https://hits.seeyoufarm.com)
 
 # Hello, People,
 Today I bring to you a script to install java in [Termux](https://termux.com) without root!
@@ -16,6 +16,7 @@ _Note: all above cpu is 64-bit and uses same binary(jdk)_
 - armhf
 - armv7l
 - arm/arm32/armv7/aarch32
+- armv8l
 
 _Note : all above cpu is 32-bit and uses same binary(jdk)_
 
