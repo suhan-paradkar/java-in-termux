@@ -22,6 +22,13 @@ else
 	ex="deb"
 	file="openjdk11"
 	
+       read -p "There are two java files for this cpu architecture.. choose one... 
+       1) Full Openjdk[~231MB]
+       2) Partial implementation (not standalone may be buggy)[~20MB] 
+        (1|2)" in
+
+       if [[ $in -eq 1]]
+        then
 	#Actual installation
 	ee "\e[32m[*] \e[34mInstalling openjdk-11 for ${archname}..."
 	ee "\e[32m[*] \e[34mPlease wait for some time....\e[0m"
@@ -71,5 +78,58 @@ else
         echo
         exit
     fi
+      elif [[ $in -eq 2 ]]
+      then
+      #Actual installation
+	ee "\e[32m[*] \e[34mInstalling partial openjdk-11 for ${archname}..."
+	ee "\e[32m[*] \e[34mPlease wait for some time....\e[0m"
+
+	pkg install wget -y
+	wget https://github.com/suhan-paradkar/java-in-termux/releases/download/v2.0/openjdk11_jvdroid.deb
+	wgetreturn=$?
+	if [[ $wgetreturn -eq 0 ]]
+	then
+        dpkg -i openjdk11_jvdroid."$ex"
+    	
+    	echo
+    	ee "\e[32mPartial Java was successfully installed!"
+    	ee "Check it by running \e[34mjava --version from terminal after restarting termux\e[0m
+    	echo
+    else 
+        echo
+        ee "\e[31mwget exited with an error code : $wgetreturn"
+        case $wgetreturn in
+        1)d
+            ee "\e[31mError : Generic code error\e[0m"
+            ;;
+        2)
+            ee "\e[31mError : Parse error-for instance, when parsing command-line options, the .wgetrc or .netrc...\e[0m"
+            ;;
+        3)
+            ee "\e[31mError : File I/O error.\e[0m"
+            ;;
+        4)
+            ee "\e[31mError : Network failure.\e[0m"
+            ;;
+        5)
+            ee "\e[31mError : SSL verification failure.\e[0m"
+            ;;
+        6)
+            ee "\e[31mError : Username/password authentication failure\e[0m"
+            ;;
+        7)
+            ee "\e[31mError : Protocol errors.\e[0m"
+            ;;
+        8) 
+            ee "\e[31mError : Server issued an error response.\e[0m"
+            ;;
+        esac
         
+       
+        echo
+        exit
+    fi
+    else 
+     ee "\e[31mInvalid input.\e[0m"
+  fi
 fi
