@@ -39,7 +39,8 @@ else
 	if [[ $wgetreturn -eq 0 ]]
 	then
         dpkg -i openjdk11."$ex"
-    	
+    	cd $PREFIX/share/jvm/openjdk-11.0.1/bin/
+        chmod +x *
     	echo
     	ee "\e[32mJava was successfully installed!"
     	ee "Check it by running \e[34mjava --version from terminal after restarting termux\e[0m
