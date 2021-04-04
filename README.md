@@ -41,4 +41,5 @@ chmod +x install.sh
 # Note
 - I have not compiled jdk, just wrote script
 - Jdk 8 is by [Hax4us](https://github.com/Hax4us/java)
-- Jdk 11 is from JVDroid app, with permission (GPL license)
+- Jdk 11(partial) is from JVDroid app.
+- Jdk 11 is from Lzhiyong's repo [Termux-ndk](https://github.com/Lzhiyong/termux-ndk/tree/master/openjdk-build)
