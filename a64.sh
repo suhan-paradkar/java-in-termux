@@ -10,7 +10,7 @@ ee "\e[93mThis script will install openjdk-11 in Termux."
 echo
 
 #Checking for existing Java installation
-if [ -e "$PREFIX"/bin/java ] || [ -e "$PREFIX"/share/openjdk-11.0.1/bin/java ] || [ -e "$PREFIX"/share/jdk8/bin/java ]
+if [ -e "$PREFIX"/bin/java ] || [ -e "$PREFIX"/share/jvm/openjdk-11.0.1/bin/java ] || [ -e "$PREFIX"/share/jdk8/bin/java ]
 then
 	ee "\e[32mJava is already installed!"
 	java --version
