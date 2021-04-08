@@ -27,7 +27,7 @@ else
        2) Partial implementation (not standalone may be buggy)[~20MB] 
         (1|2)" in
 
-       if [[ $in -eq 1]]
+       if [[ $in -eq 1 ]]
         then
 	#Actual installation
 	ee "\e[32m[*] \e[34mInstalling openjdk-11 for ${archname}..."
