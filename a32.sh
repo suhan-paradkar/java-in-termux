@@ -39,6 +39,8 @@ wgetreturn=$?
     
     ee "\e[32m[*] \e[34mCleaning up temporary files..."
     rm -rf "$PREFIX"/share/jdk8_arm.tar.gz
+    cd $PREFIX/share/jdk8/bin
+    chmod +x *
 
     echo
     ee "\e[32mJava was successfully installed!\e[39m"
