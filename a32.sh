@@ -33,7 +33,7 @@ wgetreturn=$?
 
     ee "\e[32m[*] \e[34mSeting-up %JAVA_HOME%..."
     export JAVA_HOME=$PREFIX/share/jdk8
-    echo "export JAVA_HOME=""$PREFI/X""/share/jdk8" >> "$HOME"/.profile
+    echo "export JAVA_HOME=""$PREFIX""/share/jdk8" >> "$HOME"/.profile
     PATH=$PREFIX/share/jdk8/bin:$PATH
     echo "PATH=""$PREFIX""/share/jdk8/bin:""$PATH"" " >> "$HOME"/.profile
     
@@ -41,6 +41,7 @@ wgetreturn=$?
     rm -rf "$PREFIX"/share/jdk8_arm.tar.gz
     cd $PREFIX/share/jdk8/bin
     chmod +x *
+    cd $HOME/java-in-termux/
 
     echo
     ee "\e[32mJava was successfully installed!\e[39m"
