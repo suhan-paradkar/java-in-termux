@@ -19,7 +19,7 @@ _Note: all above cpu is 64-bit and uses same binary(jdk)_
 - armv8l
 
 _Note : all above cpu except armv8l is 32-bit and uses same binary(jdk). armv8l is 64-bit but acts like 32-bit, hence jdk8_
-
+_JDK8 May be buggy... Help is required to resolve bugs... JDK11 is tested...so 64 bit machines are lucky_
 - **You may check your architecture by `uname -a` command**
 
 # Installation
