@@ -31,7 +31,7 @@ chmod +x install.sh
 **and**
 
 ```
- ./install.sh
+  bash install.sh
 ```
 - Java will be installed, check it by running `java --version` command from terminal
 - Package is about 200+MB(jdk11), 80MB(jdk8) or just 20MB (incase of partial installation for 64-bit cpus) and needs constant internet for proper installation
