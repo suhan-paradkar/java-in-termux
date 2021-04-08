@@ -94,7 +94,7 @@ else
     	
     	echo
     	ee "\e[32mPartial Java was successfully installed!"
-    	ee "Check it by running \e[34mjava --version from terminal after restarting termux\e[0m
+    	ee "Check it by running \e[34mjava --version from terminal after restarting termux\e[0m"
     	echo
     else 
         echo
