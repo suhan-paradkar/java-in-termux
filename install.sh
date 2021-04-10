@@ -14,6 +14,8 @@ case $(dpkg --print-architecture) in
 		FILE=a32.sh ;;
 	armv7l)
 		FILE=a32.sh  ;;
+        x86_64)
+                FILE=a64.sh  ;;
 	arm)
 		FILE=a32.sh  ;;
         armv8l)
