@@ -18,18 +18,14 @@ else
 
 #Actual installation
 ee "\e[32m[*] \e[34mDownloading JDK-8 for $(dpkg --print-architecture)...\e[0m"
-pkg install wget tar -y
-wget https://github.com/Hax4us/java/releases/download/v8-151/jdk8_arm.tar.gz
+pkg install wget
+wget https://github.com/suhan-paradkar/java-in-termux/releases/download/v2.5/openjdk_8.0_arm.deb 
 
 wgetreturn=$?
     if [[ $wgetreturn -eq 0 ]]
     then
-    ee "\e[32m[*] \e[34mMoving JDK to $PREFIX/share..."
-    mv jdk8_arm.tar.gz "$PREFIX"/share
-
-    ee "\e[32m[*] \e[34mExtracting JDK..."
-    cd "$PREFIX"/share || exit
-    tar -xvf jdk8_arm.tar.gz
+    ee "\e[32m[*] \e[34mInstalling JDK8..."
+    dpkg -i openjdk_8.0_arm.deb
 
     ee "\e[32m[*] \e[34mSeting-up %JAVA_HOME%..."
     export JAVA_HOME=$PREFIX/share/jdk8
@@ -37,8 +33,6 @@ wgetreturn=$?
     PATH=$PREFIX/share/jdk8/bin:$PATH
     echo "PATH=""$PREFIX""/share/jdk8/bin:""$PATH"" " >> "$HOME"/.profile
     
-    ee "\e[32m[*] \e[34mCleaning up temporary files..."
-    rm -rf "$PREFIX"/share/jdk8_arm.tar.gz
     cd $PREFIX/share/jdk8/bin
     chmod +x *
     cd $HOME/java-in-termux/
