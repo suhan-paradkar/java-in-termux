@@ -3,7 +3,7 @@
 # Hello People,
 Today I bring to you a script to install java in [Termux](https://termux.com) without root!
 
-**Availability: openjdk-11.0.1 for 64-bit cpu's while only jdk-8 for 32-bit cpu's. 64-bit cpu can opt partial ar full version**
+**Availability: openjdk-11.0.1 and openjdk8 for 64-bit cpu's while only jdk-8 for 32-bit cpu's. 64-bit cpu can opt partial ar full version**
 
 # Downloads Available for
 
@@ -36,12 +36,12 @@ chmod +x install.sh
   bash install.sh
 ```
 - Java will be installed, check it by running `java --version` command from terminal
-- Package is about 200+MB(jdk11), 80MB(jdk8) or just 20MB (incase of partial installation for 64-bit cpus) and needs constant internet for proper installation
+- Package is about 200+MB(jdk11), 70MB(jdk8) or just 20MB (incase of partial installation for 64-bit cpus) and needs constant internet for proper installation
 - Restart termux after installation
 
 
 # Note
 - I have not compiled jdk, just wrote script
-- Jdk 8 is by [Hax4us](https://github.com/Hax4us/java)
+- Jdk 8 is by [Hax4us](https://github.com/Hax4us/java) , compiled by me.
 - Jdk 11(partial) is from JVDroid app.
 - Jdk 11 is from Lzhiyong's repo [Termux-ndk](https://github.com/Lzhiyong/termux-ndk/tree/master/openjdk-build)
