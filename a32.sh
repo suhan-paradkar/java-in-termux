@@ -71,8 +71,6 @@ wgetreturn=$?
             ee "\e[31mError : Server issued an error response.\e[0m"                                        
             ;;
         esac
-
-        rm -rf jdk8_arm.tar.gz
         echo
         exit
     fi
