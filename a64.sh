@@ -26,7 +26,8 @@ else
        1) Full Openjdk[~231MB]
        2) Partial implementation (not standalone may be buggy)[~20MB] 
        3) JDK8 by hax4us, compiled into deb by me
-        (1|2|3)" in
+       4) JDK9
+	 (1|2|3|4)" in
 
        if [[ $in -eq 1 ]]
         then
@@ -185,6 +186,56 @@ else
             esac
             
            
+            echo
+            exit
+        fi
+    elif [[ $in -eq 4 ]]
+	#Actual installation
+        ee "\e[32m[*] \e[34mInstalling openjdk9 for ${archname}$
+        ee "\e[32m[*] \e[34mPlease wait for some time....\e[0m"
+
+        pkg install wget -y
+	wget https://github.com/suhan-paradkar/java-in-termux/releases/download/OpenJDK9/alsa-lib_1.1.3_${archname}.deb
+	wget https://github.com/suhan-paradkar/java-in-termux/releases/download/OpenJDK9/openjdk-9-jre-headless_9.2017.8.20-1_${archname}.deb
+	wget https://github.com/suhan-paradkar/java-in-termux/releases/download/OpenJDK9/openjdk-9-jdk-headless_9.2017.8.20-1_${archname}.deb	
+
+	pkg in ./alsa-lib_1.1.3_${archname}.deb ./openjdk-9-jre-headless_9.2017.8.20-1_${archname}.deb ./openjdk-9-jdk-headless_9.2017.8.20-1_${archname}.deb
+
+echo
+                ee "\e[32mJava8 was successfully installed!"
+                ee "Check it by running \e[34mjava --version from terminal after restarting termux\e[0m"
+                echo
+        else
+            echo
+            ee "\e[31mwget exited with an error code : $wgetreturn"
+            case $wgetreturn in
+            1)d
+                ee "\e[31mError : Generic code error\e[0m"
+                ;;
+            2)
+                ee "\e[31mError : Parse error-for instance, when parsing command-line options, the .wgetrc or .netrc...\e[0m"
+                ;;
+            3)
+                ee "\e[31mError : File I/O error.\e[0m"
+                ;;
+            4)
+                ee "\e[31mError : Network failure.\e[0m"
+                ;;
+            5)
+                ee "\e[31mError : SSL verification failure.\e[0m"
+                ;;
+            6)
+                ee "\e[31mError : Username/password authentication failure\e[0m"
+                ;;
+            7)
+                ee "\e[31mError : Protocol errors.\e[0m"
+                ;;
+            8)
+                ee "\e[31mError : Server issued an error response.\e[0m"
+                ;;
+            esac
+
+
             echo
             exit
         fi
