@@ -26,7 +26,7 @@ _JDK8 May be buggy... Help is required to resolve bugs... JDK11 is tested...so 6
 
 # Installation
 ```
-git clone https://github.com/suhan-paradkar/java-in-termux.git
+git clone https://github.com/suhan-paradkar/java-in-termux.git --depth=1
 cd java-in-termux
 chmod +x install.sh
 ```
@@ -45,3 +45,4 @@ chmod +x install.sh
 - Jdk 8 is by [Hax4us](https://github.com/Hax4us/java) , compiled by me.
 - Jdk 11(partial) is from JVDroid app.
 - Jdk 11 is from Lzhiyong's repo [Termux-ndk](https://github.com/Lzhiyong/termux-ndk/tree/master/openjdk-build)
+- Jdk 9 is archived termux's disabled package
