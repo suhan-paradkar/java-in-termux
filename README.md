@@ -1,5 +1,8 @@
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fsuhan-paradkar%2Fjava-in-termux&count_bg=%2367CB1B&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=true)](https://hits.seeyoufarm.com)
 
+# This repository is now archived if you want to continue development you are free to fork the repository and use the binaries after the consent of the mentioned authorsq
+
+
 # Hello People,
 Today I bring to you a script to install java in [Termux](https://termux.com) without root!
 
